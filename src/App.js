@@ -1,5 +1,5 @@
-import Container from './Container'
-import logo from './logo.svg';
+import TrackOverview from './Components/TrackOverview';
+import Header from './Components/Header';
 import React from 'react';
 import './App.css';
 
@@ -8,9 +8,8 @@ function App() {
   return (
     <div>
 
-      <img src={logo} className="App-logo" alt="logo" />
-
-      <Container />
+      <Header />
+      <TrackOverview />
 
     </div>
 
