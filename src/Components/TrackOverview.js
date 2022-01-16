@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import TrackList from './TrackList'
+import TrackSort from './TrackSort'
 import NewTrack from './NewTrack'
 
 function TrackOverview() {
@@ -25,11 +26,24 @@ function TrackOverview() {
         setTracks({ allTracks: filteredTracks })
     }
 
-
+    const sortTracks = (fieldName, reverse) => {
+        let sortedTracks = tracks.allTracks.sort((track1, track2) => {
+            if (track1[fieldName].toLowerCase() > track2[fieldName].toLowerCase()) {
+                return 1
+            }
+            if (track1.track < track2.track) {
+                return -1
+            }
+            return 0
+        })
+        reverse && sortedTracks.reverse()
+        setTracks({ allTracks: sortedTracks })
+    }
 
     return (
         <div>
             <NewTrack addTrack={addTrack} />
+            <TrackSort sortTracks={sortTracks} />
             <TrackList {...tracks} deleteTrack={deleteTrack} />
         </div>
     )
