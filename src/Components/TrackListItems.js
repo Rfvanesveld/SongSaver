@@ -2,7 +2,9 @@ import React from 'react';
 
 const TrackListItems = (props) => {
     return (
-        <li id={props.id}>
+        <li class="Track-Listing"
+
+            id={props.id}>
 
             <p> Artist: {props.Artist}</p>
 
@@ -11,7 +13,9 @@ const TrackListItems = (props) => {
             <p> Genre: {props.Genre}</p>
 
             <p> Rating: {props.Rating} </p>
-            <button onClick={props.deleteTrack}>Delete</button>
+
+            <button class="Delete-Track"
+                onClick={props.deleteTrack}>Delete</button>
         </li>
     )
 }

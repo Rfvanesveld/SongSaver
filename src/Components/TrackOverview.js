@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import TrackList from './TrackList'
 import TrackSort from './TrackSort'
-import NewTrack from './NewTrack'
+import NewTrack from './TrackNew'
 
 function TrackOverview() {
     const [tracks, setTracks] = useState({
@@ -30,7 +30,6 @@ function TrackOverview() {
     const sortTracks = (fieldName, reverse = false) => {
         console.log(fieldName);
 
-
         let sortedTracks = tracks.allTracks.sort((track1, track2) => {
             if (fieldName === 'Rating') {
                 return track1[fieldName] - track2[fieldName]
@@ -48,9 +47,11 @@ function TrackOverview() {
 
     return (
         <div>
+
             <NewTrack addTrack={addTrack} />
             <TrackSort sortTracks={sortTracks} />
             <TrackList {...tracks} deleteTrack={deleteTrack} />
+
         </div>
     )
 }
