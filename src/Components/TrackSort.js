@@ -3,19 +3,20 @@ import React from "react"
 const TrackSort = (props) => {
     return (
         <header>
-            <p>TITLE</p>
-            <button onClick={() => props.sortTracks('Title')}> Title Up</button>
-            <button onClick={() => props.sortTracks('Title', true)}>Title Down</button>
 
+            <p>In which sequence do you want to see tracks?</p>
 
-            <p>ARTIST</p>
-            <button onClick={() => props.sortTracks('Artist')}>Artist Up</button>
-            <button onClick={() => props.sortTracks('Artist', true)}>Artist Down</button>
+            <p></p>
+            <button className="TrackSequence" onClick={() => props.sortTracks('Title')}> Title Up</button>
+            <button className="TrackSequence" onClick={() => props.sortTracks('Title', true)}>Title Down</button>
 
+            <p></p>
+            <button className="TrackSequence" onClick={() => props.sortTracks('Artist')}>Artist Up</button>
+            <button className="TrackSequence" onClick={() => props.sortTracks('Artist', true)}>Artist Down</button>
 
-            <p>RATING</p>
-            <button onClick={() => props.sortTracks('Rating')}>Rating Up</button>
-            <button onClick={() => props.sortTracks('Rating', true)}>Rating Down</button>
+            <p></p>
+            <button className="TrackSequence" onClick={() => props.sortTracks('Rating')}>Rating Up</button>
+            <button className="TrackSequence" onClick={() => props.sortTracks('Rating', true)}>Rating Down</button>
 
         </header>
     )

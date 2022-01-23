@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const NewTrack = (tracks) => {
+const TrackNew = (tracks) => {
     const [newTrack, setNewTrack] = useState({
 
         Artist: '',
@@ -73,10 +73,10 @@ const NewTrack = (tracks) => {
             </select>
 
 
-            <button>Add Track</button>
+            <button className="AddTrack">ADD TRACK</button>
         </form>
     )
 }
 
-export default NewTrack;
+export default TrackNew;
 
